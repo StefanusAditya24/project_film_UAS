@@ -7,20 +7,24 @@ body, .search-bar {
 body {
 	background: #f1f1f1;
 }
-.rating-stars {
-  margin-top: -10px;
-  margin-bottom: 10px;
+.container__items {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
-.rating-stars span {
-  font-size: 20px;
-  color: #ffd700; /* Warna kuning emas untuk bintang diisi */
+.star-stroke {
+  cursor: pointer;
 }
 
-.rating-stars span.empty {
-  color: #ccc; /* Warna abu-abu untuk bintang yang tidak diisi */
+.star-fill {
+  display: block;
+  color: white; /* Warna default, dapat diubah sesuai keinginan */
+}
+
+.star-stroke.selected .star-fill {
+  display: block;
+  color: yellow; /* Warna saat dipilih */
 }
 ul {
   list-style-type: none; /* Remove bullets */
@@ -94,8 +98,8 @@ li {
 }
 .container-category {
   position: absolute;
+  margin-top: -60px;
   float: left;
-  top: 26px;
   left: 6%;
   z-index: 200;
 }
@@ -253,6 +257,97 @@ li {
   top: 100px; /* Atur tinggi (y) sesuai kebutuhan saat menggulir ke bawah */
 }
 
+.button-3 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #3852a9;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  margin-left: 5px;
+  min-height: 1rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-3:hover,
+.button-3:focus {
+  background-color: #5e7de3;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+.button-3:hover {
+  transform: translateY(-1px);
+}
+
+.button-3:active {
+  background-color: #3852a9;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+
+.button-4 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #60a83d;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  margin-left: 5px;
+  min-height: 1rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-4:hover,
+.button-4:focus {
+  background-color: #78d34b;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-4:hover {
+  transform: translateY(-1px);
+}
+
+.button-4:active {
+  background-color: #60a83d;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
 
 .button-5 {
   align-items: center;
@@ -298,6 +393,7 @@ li {
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
 }
+
 .main-content p {
   word-wrap: break-word;
   white-space: normal;
@@ -803,4 +899,13 @@ img {
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
+}
+
+.my-favorite, .show-all {
+  position: fixed;
+  top: 30px;
+  right: 0;
+  margin-right: 80px;
+  width: 130px;
+  height: 40px;
 }
